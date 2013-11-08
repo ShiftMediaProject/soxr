@@ -155,6 +155,17 @@ $RECYCLE.BIN/
 # Mac desktop service store files
 .DS_Store
 
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+deinstall.cmake
+libsoxr-dev.src
+libsoxr.src
+install_manifest.txt
+
+soxr-config.h
+!SMC/*.h
 
 Release/
 Debug/
