@@ -43,4 +43,9 @@
 #define uint32_t unsigned int32_t
 #define uint64_t unsigned int64_t
 
+//fix missing lrint
+#if _MSC_VER < 1800
+static _inline long lrint(double x){return (long)(x > 0.0 ? x + 0.5 : x - 0.5);}
+#endif
+
 #endif
