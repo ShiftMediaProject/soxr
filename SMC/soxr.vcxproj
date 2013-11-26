@@ -159,6 +159,7 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
+      <DisableSpecificWarnings>4013</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -193,6 +194,7 @@ del ..\soxr-config.h
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
+      <DisableSpecificWarnings>4013</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -227,6 +229,7 @@ del ..\soxr-config.h
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
+      <DisableSpecificWarnings>4013</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -261,6 +264,7 @@ del ..\soxr-config.h
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
+      <DisableSpecificWarnings>4013</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -305,6 +309,7 @@ del ..\soxr-config.h
       <AdditionalIncludeDirectories>..\;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
+      <DisableSpecificWarnings>4013</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -351,6 +356,7 @@ del ..\soxr-config.h
       <AdditionalIncludeDirectories>..\;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
+      <DisableSpecificWarnings>4013</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -397,6 +403,7 @@ del ..\soxr-config.h
       <AdditionalIncludeDirectories>..\;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
+      <DisableSpecificWarnings>4013</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -443,6 +450,7 @@ del ..\soxr-config.h
       <AdditionalIncludeDirectories>..\;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
+      <DisableSpecificWarnings>4013</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
