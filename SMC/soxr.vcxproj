@@ -165,16 +165,16 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\msvc32\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-copy ..\src\soxr.h $(OutputPath)\include
-copy ..\src\soxr-lsr.h $(OutputPath)\include
-mkdir $(OutputPath)\licenses
-copy ..\COPYING.LGPL $(OutputPath)\licenses\soxr.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+copy ..\src\soxr.h $(OutDir)\include\msvc
+copy ..\src\soxr-lsr.h $(OutDir)\include\msvc
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
@@ -200,16 +200,16 @@ del ..\soxr-config.h
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\msvc64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-copy ..\src\soxr.h $(OutputPath)\include
-copy ..\src\soxr-lsr.h $(OutputPath)\include
-mkdir $(OutputPath)\licenses
-copy ..\COPYING.LGPL $(OutputPath)\licenses\soxr.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+copy ..\src\soxr.h $(OutDir)\include\msvc
+copy ..\src\soxr-lsr.h $(OutDir)\include\msvc
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
@@ -233,18 +233,18 @@ del ..\soxr-config.h
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\msvc32\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)\bin\msvc32\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
-      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ImportLibrary>$(OutDir)\lib\msvc32\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(OutDir)\bin\msvc32\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-copy ..\src\soxr.h $(OutputPath)\include
-copy ..\src\soxr-lsr.h $(OutputPath)\include
-mkdir $(OutputPath)\licenses
-copy ..\COPYING.LGPL $(OutputPath)\licenses\soxr.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+copy ..\src\soxr.h $(OutDir)\include\msvc
+copy ..\src\soxr-lsr.h $(OutDir)\include\msvc
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
@@ -268,18 +268,18 @@ del ..\soxr-config.h
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <OutputFile>$(OutDir)\bin\x64\$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)\bin\x64\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\msvc64\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)\bin\msvc64\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
-      <ProfileGuidedDatabase>$(OutDir)\bin\x64\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ImportLibrary>$(OutDir)\lib\msvc64\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(OutDir)\bin\msvc64\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-copy ..\src\soxr.h $(OutputPath)\include
-copy ..\src\soxr-lsr.h $(OutputPath)\include
-mkdir $(OutputPath)\licenses
-copy ..\COPYING.LGPL $(OutputPath)\licenses\soxr.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+copy ..\src\soxr.h $(OutDir)\include\msvc
+copy ..\src\soxr-lsr.h $(OutDir)\include\msvc
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
@@ -317,16 +317,16 @@ del ..\soxr-config.h
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\msvc32\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-copy ..\src\soxr.h $(OutputPath)\include
-copy ..\src\soxr-lsr.h $(OutputPath)\include
-mkdir $(OutputPath)\licenses
-copy ..\COPYING.LGPL $(OutputPath)\licenses\soxr.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+copy ..\src\soxr.h $(OutDir)\include\msvc
+copy ..\src\soxr-lsr.h $(OutDir)\include\msvc
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
@@ -364,16 +364,16 @@ del ..\soxr-config.h
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\msvc64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-copy ..\src\soxr.h $(OutputPath)\include
-copy ..\src\soxr-lsr.h $(OutputPath)\include
-mkdir $(OutputPath)\licenses
-copy ..\COPYING.LGPL $(OutputPath)\licenses\soxr.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+copy ..\src\soxr.h $(OutDir)\include\msvc
+copy ..\src\soxr-lsr.h $(OutDir)\include\msvc
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
@@ -409,18 +409,18 @@ del ..\soxr-config.h
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\msvc32\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)\bin\msvc32\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
-      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ImportLibrary>$(OutDir)\lib\msvc32\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(OutDir)\bin\msvc32\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-copy ..\src\soxr.h $(OutputPath)\include
-copy ..\src\soxr-lsr.h $(OutputPath)\include
-mkdir $(OutputPath)\licenses
-copy ..\COPYING.LGPL $(OutputPath)\licenses\soxr.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+copy ..\src\soxr.h $(OutDir)\include\msvc
+copy ..\src\soxr-lsr.h $(OutDir)\include\msvc
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
@@ -456,18 +456,18 @@ del ..\soxr-config.h
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <OutputFile>$(OutDir)\bin\x64\$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)\bin\x64\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\msvc64\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)\bin\msvc64\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
-      <ProfileGuidedDatabase>$(OutDir)\bin\x64\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ImportLibrary>$(OutDir)\lib\msvc64\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(OutDir)\bin\msvc64\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-copy ..\src\soxr.h $(OutputPath)\include
-copy ..\src\soxr-lsr.h $(OutputPath)\include
-mkdir $(OutputPath)\licenses
-copy ..\COPYING.LGPL $(OutputPath)\licenses\soxr.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+copy ..\src\soxr.h $(OutDir)\include\msvc
+copy ..\src\soxr-lsr.h $(OutDir)\include\msvc
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
