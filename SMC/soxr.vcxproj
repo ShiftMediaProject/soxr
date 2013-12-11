@@ -164,6 +164,7 @@
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
       <DisableSpecificWarnings>4013</DisableSpecificWarnings>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -199,6 +200,7 @@ del ..\soxr-config.h
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
       <DisableSpecificWarnings>4013</DisableSpecificWarnings>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -234,6 +236,7 @@ del ..\soxr-config.h
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
       <DisableSpecificWarnings>4013</DisableSpecificWarnings>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
@@ -268,6 +271,7 @@ del ..\soxr-config.h
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
       <DisableSpecificWarnings>4013</DisableSpecificWarnings>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
@@ -312,6 +316,7 @@ del ..\soxr-config.h
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
       <DisableSpecificWarnings>4013</DisableSpecificWarnings>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -359,6 +364,7 @@ del ..\soxr-config.h
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
       <DisableSpecificWarnings>4013</DisableSpecificWarnings>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -406,6 +412,7 @@ del ..\soxr-config.h
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
       <DisableSpecificWarnings>4013</DisableSpecificWarnings>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -452,6 +459,7 @@ del ..\soxr-config.h
       <ExceptionHandling>false</ExceptionHandling>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
       <DisableSpecificWarnings>4013</DisableSpecificWarnings>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
