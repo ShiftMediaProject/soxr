@@ -207,6 +207,7 @@
       <ExceptionHandling>false</ExceptionHandling>
       <DisableSpecificWarnings>4013;4996</DisableSpecificWarnings>
       <OpenMPSupport>true</OpenMPSupport>
+      <ProgramDataBaseFileName>$(OutDir)\lib\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -240,6 +241,7 @@ del ..\soxr-config.h
       <ExceptionHandling>false</ExceptionHandling>
       <DisableSpecificWarnings>4013;4996</DisableSpecificWarnings>
       <OpenMPSupport>true</OpenMPSupport>
+      <ProgramDataBaseFileName>$(OutDir)\lib\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -274,6 +276,7 @@ del ..\soxr-config.h
       <ExceptionHandling>false</ExceptionHandling>
       <DisableSpecificWarnings>4013;4996</DisableSpecificWarnings>
       <OpenMPSupport>true</OpenMPSupport>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
@@ -282,6 +285,7 @@ del ..\soxr-config.h
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -307,6 +311,7 @@ del ..\soxr-config.h
       <ExceptionHandling>false</ExceptionHandling>
       <DisableSpecificWarnings>4013;4996</DisableSpecificWarnings>
       <OpenMPSupport>true</OpenMPSupport>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
@@ -314,6 +319,7 @@ del ..\soxr-config.h
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -351,6 +357,7 @@ del ..\soxr-config.h
       <OpenMPSupport>true</OpenMPSupport>
       <FloatingPointModel>Fast</FloatingPointModel>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -398,6 +405,7 @@ del ..\soxr-config.h
       <OpenMPSupport>true</OpenMPSupport>
       <FloatingPointModel>Fast</FloatingPointModel>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -444,6 +452,7 @@ del ..\soxr-config.h
       <DisableSpecificWarnings>4013;4996</DisableSpecificWarnings>
       <OpenMPSupport>true</OpenMPSupport>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -490,6 +499,7 @@ del ..\soxr-config.h
       <DisableSpecificWarnings>4013;4996</DisableSpecificWarnings>
       <OpenMPSupport>true</OpenMPSupport>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -536,6 +546,7 @@ del ..\soxr-config.h
       <ExceptionHandling>false</ExceptionHandling>
       <DisableSpecificWarnings>4013;4996</DisableSpecificWarnings>
       <OpenMPSupport>true</OpenMPSupport>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -581,6 +592,7 @@ del ..\soxr-config.h
       <ExceptionHandling>false</ExceptionHandling>
       <DisableSpecificWarnings>4013;4996</DisableSpecificWarnings>
       <OpenMPSupport>true</OpenMPSupport>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
