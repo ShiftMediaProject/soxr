@@ -1,4 +1,4 @@
-/* SoX Resampler Library      Copyright (c) 2007-13 robs@users.sourceforge.net
+/* SoX Resampler Library      Copyright (c) 2007-14 robs@users.sourceforge.net
  * Licence for this file: LGPL v2.1                  See LICENCE for details. */
 
 #include <math.h>
@@ -447,7 +447,7 @@ static char const * rate_init(
 
   p->num_stages = shift + have_pre_stage + have_arb_stage + have_post_stage;
   if (!p->num_stages && multiplier != 1) {
-    arbL = 0;
+    bits = arbL = 0;                         /* Use cubic_stage in this case. */
     ++p->num_stages;
   }
   p->stages = calloc((size_t)p->num_stages + 1, sizeof(*p->stages));
@@ -483,7 +483,7 @@ static char const * rate_init(
         log2_min_dft_size, log2_large_dft_size);
   }
 
-  if (!bits && have_arb_stage) {                /* Quick and dirty arb stage: */
+  if (!bits && have_arb_stage) {                  /* `Quick' cubic arb stage: */
     arb_stage.type = cubic_stage;
     arb_stage.fn = cubic_stage_fn;
     arb_stage.mult = multiplier, multiplier = 1;
@@ -621,17 +621,19 @@ static void rate_flush(rate_t * p)
   uint64_t samples_out = (uint64_t)((double)p->samples_in / p->factor + .5);
 #endif
   size_t remaining = (size_t)(samples_out - p->samples_out);
-  sample_t * buff = calloc(1024, sizeof(*buff));
 
-  if (samples_out > p->samples_out) {
+  if ((size_t)fifo_occupancy(fifo) < remaining) {
+    uint64_t samples_in = p->samples_in;
+    sample_t * buff = calloc(1024, sizeof(*buff));
+
     while ((size_t)fifo_occupancy(fifo) < remaining) {
       rate_input(p, buff, 1024);
       rate_process(p);
     }
     fifo_trim_to(fifo, (int)remaining);
-    p->samples_in = 0;
+    p->samples_in = samples_in;
+    free(buff);
   }
-  free(buff);
 }
 
 static void rate_close(rate_t * p)
@@ -663,10 +665,10 @@ static double rate_delay(rate_t * p)
 {
 #if defined _MSC_VER && _MSC_VER == 1200
   double samples_out = (double)(int64_t)p->samples_in / p->factor;
-  return samples_out - (double)(int64_t)p->samples_out;
+  return max(0, samples_out - (double)(int64_t)p->samples_out);
 #else
   double samples_out = (double)p->samples_in / p->factor;
-  return samples_out - (double)p->samples_out;
+  return max(0, samples_out - (double)p->samples_out);
 #endif
 }
 

@@ -63,9 +63,10 @@ input or output (e.g. ilen, olen).                                            */
 /* --------------------------- Version management --------------------------- */
 
 /* E.g. #if SOXR_THIS_VERSION >= SOXR_VERSION(0,1,1) ...                      */
+
 #define SOXR_VERSION(x,y,z)     (((x)<<16)|((y)<<8)|(z))
-#define SOXR_THIS_VERSION       SOXR_VERSION(0,1,1)
-#define SOXR_THIS_VERSION_STR               "0.1.1"
+#define SOXR_THIS_VERSION       SOXR_VERSION(0,1,2)
+#define SOXR_THIS_VERSION_STR               "0.1.2"
 
 
 
@@ -105,7 +106,11 @@ SOXR soxr_t soxr_create(
     soxr_error_t *,              /* To report any error during creation. */
     soxr_io_spec_t const *,      /* To specify non-default I/O formats. */
     soxr_quality_spec_t const *, /* To specify non-default resampling quality.*/
-    soxr_runtime_spec_t const *);/* To specify non-default runtime resources. */
+    soxr_runtime_spec_t const *);/* To specify non-default runtime resources.
+
+    Default io_spec      is per soxr_io_spec(SOXR_FLOAT32_I, SOXR_FLOAT32_I)
+    Default quality_spec is per soxr_quality_spec(SOXR_HQ, 0)
+    Default runtime_spec is per soxr_runtime_spec(1)                          */
 
 
 
@@ -176,7 +181,9 @@ SOXR void         soxr_delete(soxr_t);  /* Free resources. */
 
 
 /* `Short-cut', single call to resample a (probably short) signal held entirely
- * in memory.  See soxr_create and soxr_process above for parameter details. */
+ * in memory.  See soxr_create and soxr_process above for parameter details.
+ * Note that unlike soxr_create however, the default quality spec. for
+ * soxr_oneshot is per soxr_quality_spec(SOXR_LQ, 0). */
 
 SOXR soxr_error_t soxr_oneshot(
     double         input_rate,
@@ -190,8 +197,8 @@ SOXR soxr_error_t soxr_oneshot(
 
 
 
-/* For variable-rate resampling (experimental). See example # 5 for how to
- * create a variable-rate resampler and how to use this function. */
+/* For variable-rate resampling. See example # 5 for how to create a
+ * variable-rate resampler and how to use this function. */
 
 SOXR soxr_error_t soxr_set_io_ratio(soxr_t, double io_ratio, size_t slew_len);
 
@@ -245,7 +252,7 @@ struct soxr_quality_spec {                                       /* Typically */
 #define SOXR_MAINTAIN_3DB_PT   4u  /* Reserved for internal use. */
 #define SOXR_HI_PREC_CLOCK     8u  /* Increase `irrational' ratio accuracy. */
 #define SOXR_DOUBLE_PRECISION 16u  /* Use D.P. calcs even if precision <= 20. */
-#define SOXR_VR               32u  /* Experimental, variable-rate resampling. */
+#define SOXR_VR               32u  /* Variable-rate resampling. */
 
 
 
@@ -259,8 +266,8 @@ struct soxr_runtime_spec {                                       /* Typically */
 };
                                    /* For `irrational' ratios only: */
 #define SOXR_COEF_INTERP_AUTO  0u    /* Auto select coef. interpolation. */
-#define SOXR_COEF_INTERP_LOW   1u    /* Man. select: less CPU, more memory. */
-#define SOXR_COEF_INTERP_HIGH  2u    /* Man. select: more CPU, less memory. */
+#define SOXR_COEF_INTERP_LOW   2u    /* Man. select: less CPU, more memory. */
+#define SOXR_COEF_INTERP_HIGH  3u    /* Man. select: more CPU, less memory. */
 
 #define SOXR_STRICT_BUFFERING  4u  /* Reserved for future use. */
 #define SOXR_NOSMALLINTOPT     8u  /* For test purposes only. */
@@ -313,7 +320,19 @@ SOXR soxr_io_spec_t soxr_io_spec(
 
 
 
-/* --------------------------- Internal use only ---------------------------- */
+/* --------------------------- Advanced use only ---------------------------- */
+
+/* For new designs, the following functions/usage will probably not be needed.
+ * They might be useful when adding soxr into an existing design where values
+ * for the resampling-rate and/or number-of-channels parameters to soxr_create
+ * are not available when that function will be called.  In such cases, the
+ * relevant soxr_create parameter(s) can be given as 0, then one or both of the
+ * following (as appropriate) later invoked (but prior to calling soxr_process
+ * or soxr_output):
+ *
+ * soxr_set_error(soxr, soxr_set_io_ratio(soxr, io_ratio, 0));
+ * soxr_set_error(soxr, soxr_set_num_channels(soxr, num_channels));
+ */
 
 SOXR soxr_error_t soxr_set_error(soxr_t, soxr_error_t);
 SOXR soxr_error_t soxr_set_num_channels(soxr_t, unsigned);

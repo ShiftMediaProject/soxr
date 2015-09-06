@@ -12,7 +12,7 @@ set (DESCRIPTION_SUMMARY "High quality, one-dimensional sample-rate conversion l
 
 set (PROJECT_VERSION_MAJOR 0)
 set (PROJECT_VERSION_MINOR 1)
-set (PROJECT_VERSION_PATCH 1)
+set (PROJECT_VERSION_PATCH 2)
 
 # For shared-object; if, since the last public release:
 #  * library code changed at all: ++revision
@@ -21,7 +21,7 @@ set (PROJECT_VERSION_PATCH 1)
 #  * interfaces removed:          age = 0
 
 set (SO_VERSION_CURRENT  1)
-set (SO_VERSION_REVISION 0)
+set (SO_VERSION_REVISION 1)
 set (SO_VERSION_AGE      1)
 
 
@@ -75,10 +75,11 @@ endif ()
 
 if (WITH_OPENMP)
   find_package (OpenMP)
-endif ()
-if (OPENMP_FOUND)
-  set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
-  set (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
+  if (OPENMP_FOUND)
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+    set (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
+    set (CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} ${OpenMP_SHARED_LINKER_FLAGS}")
+  endif ()
 endif ()
 
 if (WITH_SIMD)
