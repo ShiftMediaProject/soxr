@@ -235,6 +235,12 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
+)
+if exist $(OutDir)\include\soxr.h (
+del $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -268,6 +274,12 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
+)
+if exist $(OutDir)\include\soxr.h (
+del $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -302,6 +314,12 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
+)
+if exist $(OutDir)\include\soxr.h (
+del $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -335,6 +353,12 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
+)
+if exist $(OutDir)\include\soxr.h (
+del $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -381,6 +405,12 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
+)
+if exist $(OutDir)\include\soxr.h (
+del $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -427,6 +457,12 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
+)
+if exist $(OutDir)\include\soxr.h (
+del $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -473,6 +509,12 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
+)
+if exist $(OutDir)\include\soxr.h (
+del $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -519,6 +561,12 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
+)
+if exist $(OutDir)\include\soxr.h (
+del $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -564,6 +612,12 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
+)
+if exist $(OutDir)\include\soxr.h (
+del $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -608,6 +662,12 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
+)
+if exist $(OutDir)\include\soxr.h (
+del $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
