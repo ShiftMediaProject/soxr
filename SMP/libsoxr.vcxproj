@@ -157,53 +157,63 @@
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libsoxrd</TargetName>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libsoxrd</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>soxrd</TargetName>
     <LinkIncremental>false</LinkIncremental>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>soxrd</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <LinkIncremental>false</LinkIncremental>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libsoxr</TargetName>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libsoxr</TargetName>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libsoxr</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libsoxr</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>soxr</TargetName>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>soxr</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -243,6 +253,21 @@ if exist $(OutDir)\include\soxr-lsr.h (
 del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\soxr.h (
+del /f /q $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del /f /q $(OutDir)\include\soxr-lsr.h
+)
+if exist $(OutDir)\licenses\soxr.txt (
+del /f /q $(OutDir)\licenses\soxr.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -282,6 +307,21 @@ if exist $(OutDir)\include\soxr-lsr.h (
 del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\soxr.h (
+del /f /q $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del /f /q $(OutDir)\include\soxr-lsr.h
+)
+if exist $(OutDir)\licenses\soxr.txt (
+del /f /q $(OutDir)\licenses\soxr.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <ClCompile>
@@ -322,6 +362,21 @@ if exist $(OutDir)\include\soxr-lsr.h (
 del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\soxr.h (
+del /f /q $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del /f /q $(OutDir)\include\soxr-lsr.h
+)
+if exist $(OutDir)\licenses\soxr.txt (
+del /f /q $(OutDir)\licenses\soxr.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <ClCompile>
@@ -361,6 +416,21 @@ if exist $(OutDir)\include\soxr-lsr.h (
 del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\soxr.h (
+del /f /q $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del /f /q $(OutDir)\include\soxr-lsr.h
+)
+if exist $(OutDir)\licenses\soxr.txt (
+del /f /q $(OutDir)\licenses\soxr.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -413,6 +483,21 @@ if exist $(OutDir)\include\soxr-lsr.h (
 del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\soxr.h (
+del /f /q $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del /f /q $(OutDir)\include\soxr-lsr.h
+)
+if exist $(OutDir)\licenses\soxr.txt (
+del /f /q $(OutDir)\licenses\soxr.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
     <ClCompile>
@@ -465,6 +550,21 @@ if exist $(OutDir)\include\soxr-lsr.h (
 del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\soxr.h (
+del /f /q $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del /f /q $(OutDir)\include\soxr-lsr.h
+)
+if exist $(OutDir)\licenses\soxr.txt (
+del /f /q $(OutDir)\licenses\soxr.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -517,6 +617,21 @@ if exist $(OutDir)\include\soxr-lsr.h (
 del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\soxr.h (
+del /f /q $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del /f /q $(OutDir)\include\soxr-lsr.h
+)
+if exist $(OutDir)\licenses\soxr.txt (
+del /f /q $(OutDir)\licenses\soxr.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
     <ClCompile>
@@ -569,6 +684,21 @@ if exist $(OutDir)\include\soxr-lsr.h (
 del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\soxr.h (
+del /f /q $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del /f /q $(OutDir)\include\soxr-lsr.h
+)
+if exist $(OutDir)\licenses\soxr.txt (
+del /f /q $(OutDir)\licenses\soxr.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <ClCompile>
@@ -620,6 +750,21 @@ if exist $(OutDir)\include\soxr-lsr.h (
 del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\soxr.h (
+del /f /q $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del /f /q $(OutDir)\include\soxr-lsr.h
+)
+if exist $(OutDir)\licenses\soxr.txt (
+del /f /q $(OutDir)\licenses\soxr.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <ClCompile>
@@ -670,6 +815,21 @@ if exist $(OutDir)\include\soxr-lsr.h (
 del $(OutDir)\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\soxr.h (
+del /f /q $(OutDir)\include\soxr.h
+)
+if exist $(OutDir)\include\soxr-lsr.h (
+del /f /q $(OutDir)\include\soxr-lsr.h
+)
+if exist $(OutDir)\licenses\soxr.txt (
+del /f /q $(OutDir)\licenses\soxr.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\data-io.c" />
