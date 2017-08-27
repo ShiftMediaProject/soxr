@@ -244,9 +244,9 @@
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\src\soxr.h $(OutDir)\include
-copy ..\src\soxr-lsr.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\src\soxr.h "$(OutDir)"\include
+copy ..\src\soxr-lsr.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
@@ -254,11 +254,11 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
 )
-if exist $(OutDir)\include\soxr.h (
-del $(OutDir)\include\soxr.h
+if exist "$(OutDir)"\include\soxr.h (
+del "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del "$(OutDir)"\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -266,11 +266,11 @@ del $(OutDir)\include\soxr-lsr.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\soxr.h (
-del /f /q $(OutDir)\include\soxr.h
+      <Command>if exist "$(OutDir)"\include\soxr.h (
+del /f /q "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del /f /q $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del /f /q "$(OutDir)"\include\soxr-lsr.h
 )
 if exist $(OutDir)\licenses\soxr.txt (
 del /f /q $(OutDir)\licenses\soxr.txt
@@ -298,9 +298,9 @@ del /f /q $(OutDir)\licenses\soxr.txt
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\src\soxr.h $(OutDir)\include
-copy ..\src\soxr-lsr.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\src\soxr.h "$(OutDir)"\include
+copy ..\src\soxr-lsr.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
@@ -308,11 +308,11 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
 )
-if exist $(OutDir)\include\soxr.h (
-del $(OutDir)\include\soxr.h
+if exist "$(OutDir)"\include\soxr.h (
+del "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del "$(OutDir)"\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -320,11 +320,11 @@ del $(OutDir)\include\soxr-lsr.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\soxr.h (
-del /f /q $(OutDir)\include\soxr.h
+      <Command>if exist "$(OutDir)"\include\soxr.h (
+del /f /q "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del /f /q $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del /f /q "$(OutDir)"\include\soxr-lsr.h
 )
 if exist $(OutDir)\licenses\soxr.txt (
 del /f /q $(OutDir)\licenses\soxr.txt
@@ -354,9 +354,9 @@ del /f /q $(OutDir)\licenses\soxr.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\src\soxr.h $(OutDir)\include
-copy ..\src\soxr-lsr.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\src\soxr.h "$(OutDir)"\include
+copy ..\src\soxr-lsr.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
@@ -364,11 +364,11 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
 )
-if exist $(OutDir)\include\soxr.h (
-del $(OutDir)\include\soxr.h
+if exist "$(OutDir)"\include\soxr.h (
+del "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del "$(OutDir)"\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -376,11 +376,11 @@ del $(OutDir)\include\soxr-lsr.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\soxr.h (
-del /f /q $(OutDir)\include\soxr.h
+      <Command>if exist "$(OutDir)"\include\soxr.h (
+del /f /q "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del /f /q $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del /f /q "$(OutDir)"\include\soxr-lsr.h
 )
 if exist $(OutDir)\licenses\soxr.txt (
 del /f /q $(OutDir)\licenses\soxr.txt
@@ -409,9 +409,9 @@ del /f /q $(OutDir)\licenses\soxr.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\src\soxr.h $(OutDir)\include
-copy ..\src\soxr-lsr.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\src\soxr.h "$(OutDir)"\include
+copy ..\src\soxr-lsr.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
@@ -419,11 +419,11 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
 )
-if exist $(OutDir)\include\soxr.h (
-del $(OutDir)\include\soxr.h
+if exist "$(OutDir)"\include\soxr.h (
+del "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del "$(OutDir)"\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -431,11 +431,11 @@ del $(OutDir)\include\soxr-lsr.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\soxr.h (
-del /f /q $(OutDir)\include\soxr.h
+      <Command>if exist "$(OutDir)"\include\soxr.h (
+del /f /q "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del /f /q $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del /f /q "$(OutDir)"\include\soxr-lsr.h
 )
 if exist $(OutDir)\licenses\soxr.txt (
 del /f /q $(OutDir)\licenses\soxr.txt
@@ -472,9 +472,9 @@ del /f /q $(OutDir)\licenses\soxr.txt
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\src\soxr.h $(OutDir)\include
-copy ..\src\soxr-lsr.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\src\soxr.h "$(OutDir)"\include
+copy ..\src\soxr-lsr.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
@@ -482,11 +482,11 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
 )
-if exist $(OutDir)\include\soxr.h (
-del $(OutDir)\include\soxr.h
+if exist "$(OutDir)"\include\soxr.h (
+del "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del "$(OutDir)"\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -494,11 +494,11 @@ del $(OutDir)\include\soxr-lsr.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\soxr.h (
-del /f /q $(OutDir)\include\soxr.h
+      <Command>if exist "$(OutDir)"\include\soxr.h (
+del /f /q "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del /f /q $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del /f /q "$(OutDir)"\include\soxr-lsr.h
 )
 if exist $(OutDir)\licenses\soxr.txt (
 del /f /q $(OutDir)\licenses\soxr.txt
@@ -535,9 +535,9 @@ del /f /q $(OutDir)\licenses\soxr.txt
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\src\soxr.h $(OutDir)\include
-copy ..\src\soxr-lsr.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\src\soxr.h "$(OutDir)"\include
+copy ..\src\soxr-lsr.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
@@ -545,11 +545,11 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
 )
-if exist $(OutDir)\include\soxr.h (
-del $(OutDir)\include\soxr.h
+if exist "$(OutDir)"\include\soxr.h (
+del "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del "$(OutDir)"\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -557,11 +557,11 @@ del $(OutDir)\include\soxr-lsr.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\soxr.h (
-del /f /q $(OutDir)\include\soxr.h
+      <Command>if exist "$(OutDir)"\include\soxr.h (
+del /f /q "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del /f /q $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del /f /q "$(OutDir)"\include\soxr-lsr.h
 )
 if exist $(OutDir)\licenses\soxr.txt (
 del /f /q $(OutDir)\licenses\soxr.txt
@@ -598,9 +598,9 @@ del /f /q $(OutDir)\licenses\soxr.txt
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\src\soxr.h $(OutDir)\include
-copy ..\src\soxr-lsr.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\src\soxr.h "$(OutDir)"\include
+copy ..\src\soxr-lsr.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
@@ -608,11 +608,11 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
 )
-if exist $(OutDir)\include\soxr.h (
-del $(OutDir)\include\soxr.h
+if exist "$(OutDir)"\include\soxr.h (
+del "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del "$(OutDir)"\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -620,11 +620,11 @@ del $(OutDir)\include\soxr-lsr.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\soxr.h (
-del /f /q $(OutDir)\include\soxr.h
+      <Command>if exist "$(OutDir)"\include\soxr.h (
+del /f /q "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del /f /q $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del /f /q "$(OutDir)"\include\soxr-lsr.h
 )
 if exist $(OutDir)\licenses\soxr.txt (
 del /f /q $(OutDir)\licenses\soxr.txt
@@ -661,9 +661,9 @@ del /f /q $(OutDir)\licenses\soxr.txt
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\src\soxr.h $(OutDir)\include
-copy ..\src\soxr-lsr.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\src\soxr.h "$(OutDir)"\include
+copy ..\src\soxr-lsr.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
@@ -671,11 +671,11 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
 )
-if exist $(OutDir)\include\soxr.h (
-del $(OutDir)\include\soxr.h
+if exist "$(OutDir)"\include\soxr.h (
+del "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del "$(OutDir)"\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -683,11 +683,11 @@ del $(OutDir)\include\soxr-lsr.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\soxr.h (
-del /f /q $(OutDir)\include\soxr.h
+      <Command>if exist "$(OutDir)"\include\soxr.h (
+del /f /q "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del /f /q $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del /f /q "$(OutDir)"\include\soxr-lsr.h
 )
 if exist $(OutDir)\licenses\soxr.txt (
 del /f /q $(OutDir)\licenses\soxr.txt
@@ -725,9 +725,9 @@ del /f /q $(OutDir)\licenses\soxr.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\src\soxr.h $(OutDir)\include
-copy ..\src\soxr-lsr.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\src\soxr.h "$(OutDir)"\include
+copy ..\src\soxr-lsr.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
@@ -735,11 +735,11 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
 )
-if exist $(OutDir)\include\soxr.h (
-del $(OutDir)\include\soxr.h
+if exist "$(OutDir)"\include\soxr.h (
+del "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del "$(OutDir)"\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -747,11 +747,11 @@ del $(OutDir)\include\soxr-lsr.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\soxr.h (
-del /f /q $(OutDir)\include\soxr.h
+      <Command>if exist "$(OutDir)"\include\soxr.h (
+del /f /q "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del /f /q $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del /f /q "$(OutDir)"\include\soxr-lsr.h
 )
 if exist $(OutDir)\licenses\soxr.txt (
 del /f /q $(OutDir)\licenses\soxr.txt
@@ -788,9 +788,9 @@ del /f /q $(OutDir)\licenses\soxr.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\src\soxr.h $(OutDir)\include
-copy ..\src\soxr-lsr.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\src\soxr.h "$(OutDir)"\include
+copy ..\src\soxr-lsr.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
     </PostBuildEvent>
@@ -798,11 +798,11 @@ copy ..\COPYING.LGPL $(OutDir)\licenses\soxr.txt</Command>
       <Command>if exist ..\soxr-config.h (
 del ..\soxr-config.h
 )
-if exist $(OutDir)\include\soxr.h (
-del $(OutDir)\include\soxr.h
+if exist "$(OutDir)"\include\soxr.h (
+del "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del "$(OutDir)"\include\soxr-lsr.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -810,11 +810,11 @@ del $(OutDir)\include\soxr-lsr.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\soxr.h (
-del /f /q $(OutDir)\include\soxr.h
+      <Command>if exist "$(OutDir)"\include\soxr.h (
+del /f /q "$(OutDir)"\include\soxr.h
 )
-if exist $(OutDir)\include\soxr-lsr.h (
-del /f /q $(OutDir)\include\soxr-lsr.h
+if exist "$(OutDir)"\include\soxr-lsr.h (
+del /f /q "$(OutDir)"\include\soxr-lsr.h
 )
 if exist $(OutDir)\licenses\soxr.txt (
 del /f /q $(OutDir)\licenses\soxr.txt
