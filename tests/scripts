@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 # SoX Resampler Library       Copyright (c) 2007-15 robs@users.sourceforge.net
@@ -6,8 +6,9 @@ set -e
 
 ../../tests/bandwidth-test
 ../../tests/eg-test
-../../tests/io-test
+../../tests/io-test 3
 ../../tests/large-ratio-test
 ../../tests/phase-test
 ../../tests/q-test
-../../tests/time-test
+../../tests/time-test 1
+../../tests/time-test 2
