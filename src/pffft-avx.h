@@ -26,10 +26,10 @@ typedef __m256d v4sf;
   out1 = _mm256_unpacklo_pd(t1, t2); \
   out2 = _mm256_unpackhi_pd(t1, t2);}
 #define VTRANSPOSE4(x0,x1,x2,x3) {v4sf \
-  t0 = _mm256_shuffle_pd(x0,x1, 0x0), \
-  t2 = _mm256_shuffle_pd(x0,x1, 0xf), \
-  t1 = _mm256_shuffle_pd(x2,x3, 0x0), \
-  t3 = _mm256_shuffle_pd(x2,x3, 0xf); \
+  t0 = _mm256_shuffle_pd(x0,x1, 0x00), \
+  t2 = _mm256_shuffle_pd(x0,x1, 0x0F), \
+  t1 = _mm256_shuffle_pd(x2,x3, 0x00), \
+  t3 = _mm256_shuffle_pd(x2,x3, 0x0F); \
   x0 = _mm256_permute2f128_pd(t0,t1, 0x20); \
   x1 = _mm256_permute2f128_pd(t2,t3, 0x20); \
   x2 = _mm256_permute2f128_pd(t0,t1, 0x31); \
