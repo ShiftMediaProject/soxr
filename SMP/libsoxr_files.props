@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\cr.c" />
+    <ClCompile Include="..\src\cr32.c" />
+    <ClCompile Include="..\src\cr32s.c" />
+    <ClCompile Include="..\src\cr64.c" />
+    <ClCompile Include="..\src\cr64s.c" />
+    <ClCompile Include="..\src\data-io.c" />
+    <ClCompile Include="..\src\dbesi0.c" />
+    <ClCompile Include="..\src\fft4g32.c" />
+    <ClCompile Include="..\src\fft4g64.c" />
+    <ClCompile Include="..\src\filter.c" />
+    <ClCompile Include="..\src\pffft32s.c" />
+    <ClCompile Include="..\src\pffft64s.c" />
+    <ClCompile Include="..\src\soxr.c" />
+    <ClCompile Include="..\src\util32s.c" />
+    <ClCompile Include="..\src\util64s.c" />
+    <ClCompile Include="..\src\vr32.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\aliases.h" />
+    <ClInclude Include="..\src\ccrw2.h" />
+    <ClInclude Include="..\src\cr.h" />
+    <ClInclude Include="..\src\data-io.h" />
+    <ClInclude Include="..\src\dev32s.h" />
+    <ClInclude Include="..\src\dev64s.h" />
+    <ClInclude Include="..\src\fft4g.h" />
+    <ClInclude Include="..\src\fft4g_cache.h" />
+    <ClInclude Include="..\src\fifo.h" />
+    <ClInclude Include="..\src\filter.h" />
+    <ClInclude Include="..\src\half-coefs.h" />
+    <ClInclude Include="..\src\half-fir.h" />
+    <ClInclude Include="..\src\internal.h" />
+    <ClInclude Include="..\src\math-wrap.h" />
+    <ClInclude Include="..\src\pffft-avx.h" />
+    <ClInclude Include="..\src\pffft.h" />
+    <ClInclude Include="..\src\poly-fir.h" />
+    <ClInclude Include="..\src\poly-fir0.h" />
+    <ClInclude Include="..\src\rdft.h" />
+    <ClInclude Include="..\src\rdft_t.h" />
+    <ClInclude Include="..\src\rint-clip.h" />
+    <ClInclude Include="..\src\rint.h" />
+    <ClInclude Include="..\src\samplerate.h" />
+    <ClInclude Include="..\src\soxr-lsr.h" />
+    <ClInclude Include="..\src\soxr.h" />
+    <ClInclude Include="..\src\std-types.h" />
+    <ClInclude Include="..\src\util32s.h" />
+    <ClInclude Include="..\src\util64s.h" />
+    <ClInclude Include="..\src\vr-coefs.h" />
+    <ClInclude Include="soxr-config.h" />
+  </ItemGroup>
+</Project>
